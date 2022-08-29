@@ -39,16 +39,16 @@ class ApplicationController < Sinatra::Base
     Nation.all.to_json
   end
   post "/nations" do
-    nation = Nation.create(nation_name:params[:nation_name], nation_location[:nation_location])
+    nation = Nation.create(nation_name: params[:nation_name], nation_location: params[:nation_location])
     nation.to_json
   end
   # Role --------
   get "/roles" do
     Role.all.to_json
   end
-  post "/roles" do
-    role = Role.create(role_title:params[:role_title], role_rating[:role_rating])
-    role.to_json
-  end
+  # post "/roles" do
+  #   role = Role.create(role_title:params[:role_title], role_rating[:role_rating])
+  #   role.to_json
+  # end
 
 end

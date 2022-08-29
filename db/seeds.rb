@@ -1,7 +1,7 @@
 puts "🌱 Seeding spices..."
 
 # Seed your database here
-Nation.create(nation_name:'Hyrule', nation_location:'Eastern Mountains')
+Nation.create(nation_name:'Hyrule', nation_location:'Mountains')
 Nation.create(nation_name:'Earth Kingdom', nation_location:'Canyons')
 Nation.create(nation_name:'Whiterun', nation_location:'Valley')
 
