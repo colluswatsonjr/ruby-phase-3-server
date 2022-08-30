@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2022_08_22_225135) do
   create_table "roles", force: :cascade do |t|
     t.string "role_title"
     t.string "role_rating"
+    t.string "role_description"
   end
 
 end

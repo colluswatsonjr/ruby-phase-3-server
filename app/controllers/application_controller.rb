@@ -46,9 +46,9 @@ class ApplicationController < Sinatra::Base
   get "/roles" do
     Role.all.to_json
   end
-  # post "/roles" do
-  #   role = Role.create(role_title:params[:role_title], role_rating[:role_rating])
-  #   role.to_json
-  # end
+  post "/roles" do
+    role = Role.create(role_title: params[:role_title], role_rating: params[:role_rating], role_description: params[:role_description])
+    role.to_json
+  end
 
 end
