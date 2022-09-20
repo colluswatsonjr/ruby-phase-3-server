@@ -3,7 +3,7 @@ class ApplicationController < Sinatra::Base
   
   # Add your routes here
   get "/" do
-    { message: "Good luck with your project!" }.to_json
+    [Character.all, Nation.all , Role.all].to_json
   end
 
   # Character --------
@@ -14,6 +14,11 @@ class ApplicationController < Sinatra::Base
 
   get "/characters/:id" do
     character = Character.find(params[:id])
+    character.to_json
+  end
+
+  get "/:search" do
+    character = Character.where('character_name like ?', params[:search])
     character.to_json
   end
 
@@ -42,6 +47,12 @@ class ApplicationController < Sinatra::Base
     nation = Nation.create(nation_name: params[:nation_name], nation_location: params[:nation_location])
     nation.to_json
   end
+  delete "/nations/:id" do
+    nation = Nation.find(params[:id])
+    nation.destroy
+    nation.to_json
+  end
+
   # Role --------
   get "/roles" do
     Role.all.to_json

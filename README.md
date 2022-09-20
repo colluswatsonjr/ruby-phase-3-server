@@ -1,5 +1,6 @@
-## Phase 3 Project
-This application is built with a react front end and a ruby and sinatra back end.
+## Character Creation Project: phase 3
+This application allows you to create role-playing characters.
+User will be able to create a character assign them a name, role, and nation they belong to.
 
 ## Purpose
 Build frontend application using react, that uses a sinatra api that uses Active Record
